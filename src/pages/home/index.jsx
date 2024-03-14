@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CartTile from "../../component/card-item";
+import { ThreeCircles } from "react-loader-spinner";
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [product, setProduct] = useState([]);
@@ -22,7 +23,17 @@ export default function Home() {
   return (
     <div>
       {loading ? (
-        "please waite while loading the data"
+        <div className="min-h-screen w-full flex justify-center items-center">
+          <ThreeCircles
+            visible={true}
+            height="100"
+            width="100"
+            color="#a94d84"
+            ariaLabel="three-circles-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
       ) : (
         <div
           style={{
@@ -38,8 +49,6 @@ export default function Home() {
             : null}
         </div>
       )}
-
-   
     </div>
   );
 }
