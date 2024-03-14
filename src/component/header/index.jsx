@@ -1,31 +1,33 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [product, setProduct] = useState(false);
+  const [menu, setMenu] = useState(true);
   return (
-    <header class="bg-white">
+    <header className="bg-white">
       <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-        <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
+        <div className="flex lg:flex-1">
+          <a href="#" className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
             <img
-              class="h-8 w-auto"
+              className="h-8 w-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
             />
           </a>
         </div>
-        <div class="flex lg:hidden">
+        <div className="flex lg:hidden">
           <button
             type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
-            <span class="sr-only">Open main menu</span>
+            <span className="sr-only">Open main menu</span>
             <svg
-              class="h-6 w-6"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
@@ -40,17 +42,17 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <div class="relative">
+        <div className="hidden lg:flex lg:gap-x-12">
+          <div className="relative">
             <button
               type="button"
-              class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+              className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
               aria-expanded="false"
               onClick={() => setProduct(!product)}
             >
               Product
               <svg
-                class="h-5 w-5 flex-none text-gray-400"
+                className="h-5 w-5 flex-none text-gray-400"
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
@@ -74,12 +76,12 @@ export default function Header() {
             To: "opacity-0 translate-y-1"
         --> */}
             {product ? (
-              <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                <div class="p-4">
-                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+              <div className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                <div className="p-4">
+                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <svg
-                        class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -98,20 +100,20 @@ export default function Header() {
                         />
                       </svg>
                     </div>
-                    <div class="flex-auto">
-                      <a href="#" class="block font-semibold text-gray-900">
+                    <div className="flex-auto">
+                      <a href="#" className="block font-semibold text-gray-900">
                         Analytics
-                        <span class="absolute inset-0"></span>
+                        <span className="absolute inset-0"></span>
                       </a>
-                      <p class="mt-1 text-gray-600">
+                      <p className="mt-1 text-gray-600">
                         Get a better understanding of your traffic
                       </p>
                     </div>
                   </div>
-                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <svg
-                        class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -125,20 +127,20 @@ export default function Header() {
                         />
                       </svg>
                     </div>
-                    <div class="flex-auto">
-                      <a href="#" class="block font-semibold text-gray-900">
+                    <div className="flex-auto">
+                      <a href="#" className="block font-semibold text-gray-900">
                         Engagement
-                        <span class="absolute inset-0"></span>
+                        <span className="absolute inset-0"></span>
                       </a>
-                      <p class="mt-1 text-gray-600">
+                      <p className="mt-1 text-gray-600">
                         Speak directly to your customers
                       </p>
                     </div>
                   </div>
-                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <svg
-                        class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -152,20 +154,20 @@ export default function Header() {
                         />
                       </svg>
                     </div>
-                    <div class="flex-auto">
-                      <a href="#" class="block font-semibold text-gray-900">
+                    <div className="flex-auto">
+                      <a href="#" className="block font-semibold text-gray-900">
                         Security
-                        <span class="absolute inset-0"></span>
+                        <span className="absolute inset-0"></span>
                       </a>
-                      <p class="mt-1 text-gray-600">
+                      <p className="mt-1 text-gray-600">
                         Your customers’ data will be safe and secure
                       </p>
                     </div>
                   </div>
-                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <svg
-                        class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -179,20 +181,20 @@ export default function Header() {
                         />
                       </svg>
                     </div>
-                    <div class="flex-auto">
-                      <a href="#" class="block font-semibold text-gray-900">
+                    <div className="flex-auto">
+                      <a href="#" className="block font-semibold text-gray-900">
                         Integrations
-                        <span class="absolute inset-0"></span>
+                        <span className="absolute inset-0"></span>
                       </a>
-                      <p class="mt-1 text-gray-600">
+                      <p className="mt-1 text-gray-600">
                         Connect with third-party tools
                       </p>
                     </div>
                   </div>
-                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <svg
-                        class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -206,24 +208,24 @@ export default function Header() {
                         />
                       </svg>
                     </div>
-                    <div class="flex-auto">
-                      <a href="#" class="block font-semibold text-gray-900">
+                    <div className="flex-auto">
+                      <a href="#" className="block font-semibold text-gray-900">
                         Automations
-                        <span class="absolute inset-0"></span>
+                        <span className="absolute inset-0"></span>
                       </a>
-                      <p class="mt-1 text-gray-600">
+                      <p className="mt-1 text-gray-600">
                         Build strategic funnels that will convert
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   <a
                     href="#"
-                    class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                   >
                     <svg
-                      class="h-5 w-5 flex-none text-gray-400"
+                      className="h-5 w-5 flex-none text-gray-400"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -238,10 +240,10 @@ export default function Header() {
                   </a>
                   <a
                     href="#"
-                    class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                   >
                     <svg
-                      class="h-5 w-5 flex-none text-gray-400"
+                      className="h-5 w-5 flex-none text-gray-400"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -259,40 +261,44 @@ export default function Header() {
             ) : null}
           </div>
 
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-            Features
+          <a className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to="/">Home</Link>
           </a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
+          <a className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to={"/cart"}>Cart</Link>
           </a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Company
           </a>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
       {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
-      <div class="lg:hidden" role="dialog" aria-modal="true">
+      <div className="lg:hidden bg-gray-600" role="dialog" aria-modal="true" sty>
         {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
-        <div class="fixed inset-0 z-10"></div>
-        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
+        <div className="fixed inset-0 z-10"></div>
+        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
               <img
-                class="h-8 w-auto"
+                className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
             </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Close menu</span>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              onClick={() => setMenu(!menu)}
+            >
+              <span className="sr-only">Close menu</span>
               <svg
-                class="h-6 w-6"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
@@ -307,110 +313,104 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <div class="-mx-3">
-                  <button
-                    type="button"
-                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    aria-controls="disclosure-1"
-                    aria-expanded="false" onClick={()=>setProduct(!product)}
+          {menu ? (
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  <div className="-mx-3">
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      aria-controls="disclosure-1"
+                      aria-expanded="false"
+                      onClick={() => setProduct(!product)}
+                    >
+                      Product
+                      <svg
+                        className="h-5 w-5 flex-none"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                    {product ? (
+                      <div className="mt-2 space-y-2" id="disclosure-1">
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Analytics
+                        </a>
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Engagement
+                        </a>
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Security
+                        </a>
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Integrations
+                        </a>
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Automations
+                        </a>
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Watch demo
+                        </a>
+                        <a
+                          href="#"
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Contact sales
+                        </a>
+                      </div>
+                    ) : null}
+                  </div>
+                  <a className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    <Link to="/">Home</Link>
+                    Home
+                  </a>
+                  <a className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    <Link to="/cart">Cart</Link>
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Product
-                    {/* <!--
-                  Expand/collapse icon, toggle classes based on menu open state.
-
-                  Open: "rotate-180", Closed: ""
-                --> */}
-                    <svg
-                      class="h-5 w-5 flex-none"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
-                 {product ?  <div class="mt-2 space-y-2" id="disclosure-1">
-                    <a
-                      href="#"
-                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Analytics
-                    </a>
-                    <a
-                      href="#"
-                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Engagement
-                    </a>
-                    <a
-                      href="#"
-                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Security
-                    </a>
-                    <a
-                      href="#"
-                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Integrations
-                    </a>
-                    <a
-                      href="#"
-                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Automations
-                    </a>
-                    <a
-                      href="#"
-                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Watch demo
-                    </a>
-                    <a
-                      href="#"
-                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Contact sales
-                    </a>
-                  </div>:null}
+                    Company
+                  </a>
                 </div>
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
-              </div>
-              <div class="py-6">
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
+                <div className="py-6">
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Log in
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </div>
     </header>
