@@ -1,15 +1,15 @@
 import "../../App.css";
-import {  useDispatch } from "react-redux";
-import { addToCart } from "../../store/slices/cart-slice";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../../store/slices/cart-slice";
 export default function CartTile({ product }) {
-  const dispatch=useDispatch()
-  console.log("====================================");
-  console.log(product, "item");
-  console.log("====================================");
+  const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state);
 
-  function handleAddToCart(){
-    dispatch(addToCart(product))
-
+  function handleAddToCart() {
+    dispatch(addToCart(product));
+  }
+  function handleRemoveFromCart() {
+    dispatch(removeFromCart(product));
   }
   return (
     <div>
@@ -41,8 +41,17 @@ export default function CartTile({ product }) {
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             Rs : {product.price}
           </span>
-          <button className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2  hover:bg-slate-700 hover:text-white" onClick={handleAddToCart} >
-            Add to cart
+          <button
+            onClick={
+              cart.some((item) => item.id === product.id)
+                ? handleRemoveFromCart
+                : handleAddToCart
+            }
+            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2  hover:bg-slate-700 hover:text-white"
+          >
+            {cart.some((item) => item.id === product.id)
+              ? "Remove form cart"
+              : "Add to cart"}
           </button>
         </div>
       </div>
